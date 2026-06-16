@@ -24,4 +24,5 @@ if not isinstance(paths, dict) or not paths:
 print(f"validated OpenAPI: {path}")
 PY
 
-python scripts/validate_huawei_apig_openapi.py "$file"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+python "$script_dir/validate_huawei_apig_openapi.py" "$file"
